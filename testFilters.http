@@ -1,0 +1,93 @@
+### GET - pobierz dane o zdjęciu
+GET http://localhost:3000/api/filters/metadata/1685950777202 HTTP/1.1
+
+### PATCH - obróć zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "rotate"
+}
+
+### PATCH - zmień rozmiar zdjęcia
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "resize",
+     "width": 150,
+     "height": 97
+}
+
+### PATCH - zmień format zdjęcia
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982791493",
+     "action": "reformat",
+     "format": "png"
+}
+
+### PATCH - przytnij zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685978898774",
+     "action": "crop",
+     "width": 200,
+     "height": 200,
+     "left": 2,
+     "top": 2
+}
+
+### PATCH - poszarz zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "grayscale"
+}
+
+### PATCH - flipnij zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "flip"
+}
+
+### PATCH - flopnij zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "flop"
+}
+
+### PATCH - negatywuj zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982791493",
+     "action": "negate"
+}
+
+### PATCH - przebarw zdjęcie
+PATCH http://localhost:3000/api/filters
+content-type: application/json
+
+{
+     "id": "1685982249895",
+     "action": "tint",
+     "r": 255,
+     "g": 0,
+     "b": 0
+}
