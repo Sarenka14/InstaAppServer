@@ -1,0 +1,25 @@
+### POST - zarejestruj usera
+POST http://localhost:3000/api/user/register HTTP/1.1
+content-type: application/json
+
+{    
+   "name": "name",
+   "lastName": "lastName",
+   "email":"name@email.pl",
+   "password":"password"
+}
+
+### GET - potwierdź rejestrację z użyciem tokena
+GET http://localhost:3000/api/user/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hbWVAZW1haWwucGwiLCJwYXNzd29yZCI6IiQyYSQxMCR1YS5HRHE0QjdDSjFSLzMvZkdWMUxPN28yUTl1ZW5nMkpDcXRUMmgzTC5FM3kwa2M1YnFPQyIsImlhdCI6MTY4NjA4NzYwOCwiZXhwIjoxNjg2MDg3NjM4fQ.PFgE831qSESo3-d056czXvz4sbri_gCSZj7S8Pur04Q HTTP/1.1
+
+### POST - zaloguj z odesłaniem tokena po zalogowaniu
+POST http://localhost:3000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+  "email":"name@email.pl",
+  "password":"password"
+}
+
+### GET - pobierz dane o userach
+GET http://localhost:3000/api/user HTTP/1.1

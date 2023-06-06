@@ -41,4 +41,17 @@ class tagObject {
 
 let tagObjectsArray = []
 
-module.exports = { imageObject, imageObjectsArray, tagObject, tagObjectsArray };
+class userObject {
+    constructor(name, lastName, email, password) {
+        this.id = Date.now();
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.confirmed = false;
+    }
+}
+
+let userObjectsArray = []
+
+module.exports = { imageObject, imageObjectsArray, tagObject, tagObjectsArray, userObject, userObjectsArray };
